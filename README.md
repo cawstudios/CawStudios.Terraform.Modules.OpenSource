@@ -29,8 +29,35 @@ resource "aws_ec2_client_vpn_endpoint" "this-vpn-client-endpoint" {
   depends_on = [
     module.db-vpn-sg
   ]
+  tags = {
+  terraform = true 
+  }
 }
 ```
+
+## VPN NETWORK ASSOCIATION
+
+A VPN (Virtual Private Network) is a network technology that allows users to create a secure and encrypted connection to another network over the internet. When you connect to a VPN, your device creates a virtual tunnel between your device and the VPN server, encrypting all data that travels between them. so once you done with creating vpn client endpoint you have to associate the subnet where you want to allow a user to connect through vpn .
+
+```hcl
+resource "aws_ec2_client_vpn_network_association" "this-vpn-subnet-1a" {
+  client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.this-vpn-client-endpoint.id
+  subnet_id              = data.aws_subnets.public-subnets.ids[0]#Put the subnet id of aws resource which you want to secure from vpn#
+}
+```
+
+```hcl
+data "aws_subnets" "public-subnets" {
+  filter {
+    name   = "tag:Name"
+    values = [var.database_subnet_names[0], var.database_subnet_names[1]]
+  }
+  depends_on = [
+    module.vpc
+  ]
+}
+```
+
 
 ## Resources
 
