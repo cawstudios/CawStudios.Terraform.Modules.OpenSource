@@ -58,6 +58,23 @@ data "aws_subnets" "public-subnets" {
 }
 ```
 
+## VPN AUTHORIZATION RULE
+
+A VPN (Virtual Private Network) authorization rule is a set of policies and rules that define who can access the VPN network and what they can do once they are connected. Authorization rules are typically configured by the network administrator and are used to ensure that only authorized users can access the VPN network and its resources.
+
+Authorization rules can be based on a variety of criteria, including user credentials, device type, network location, and time of day. For example, an authorization rule may specify that only users with a specific role or group membership can connect to the VPN network, or that only devices with specific security settings are allowed to connect.
+
+Once a user or device is authorized to connect to the VPN network, the authorization rule can also specify what resources they are allowed to access. This can include specific network segments, servers, or applications, as well as specific actions that are allowed, such as file sharing or printing.
+
+```hcl
+
+resource "aws_ec2_client_vpn_authorization_rule" "this-vpn-authorization" {
+  client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.this-vpn-client-endpoint.id
+  target_network_cidr    = var.vpc_cidr_block#Put the vpc cidr block which we will establish vpn connection to that particular cidr#
+  authorize_all_groups   = true
+}
+
+```
 
 ## Resources
 
