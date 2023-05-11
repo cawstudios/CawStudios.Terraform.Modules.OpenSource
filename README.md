@@ -76,6 +76,29 @@ resource "aws_ec2_client_vpn_authorization_rule" "this-vpn-authorization" {
 
 ```
 
+## Contributing
+
+Report issues/questions/feature requests on in the [issues](https://github.com/cawstudios/CAW-aws-terraform-modules/issues/new) section.
+
+Full contributing [guidelines are covered here](https://drive.google.com/open?id=1CNRzDrllOFaVGT2GjIkqwM2vcXJ2rnmlF0Kx2ah1Ho0&usp=chrome_ntp).
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.40 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.40 |
+
+## Modules
+
+No modules.
 ## Resources
 
 | Name | Type |
