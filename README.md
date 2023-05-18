@@ -138,3 +138,11 @@ No modules.
 
 
 ## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_client_configuration"></a> [client_configuration](#output\_client\_configuration) | VPN Client Configuration data. |
+| <a name="output_full_client_configuration"></a> [full\_client\_configuration](#output\_full\_client\_configuration) | Client configuration including client certificate and private key. |
+| <a name="output_vpn_endpoint_arn"></a> [vpn\_endpoint\_arn](#output\_vpn\_endpoint\_arns) |The ARN of the Client VPN Endpoint Connection. |
+| <a name="output_vpn_endpoint_dns_name"></a> [vpn\_endpoint\_dns\_name](#output\_vpn\_endpoint\_dns\_name) |The DNS Name of the Client VPN Endpoint Connection. |
+| <a name="output_vpn_endpoint_id"></a> [vpn\_endpoint\_id](#output\_vpn\_endpoint\_id) |The ID of the Client VPN Endpoint Connection. |
