@@ -121,6 +121,15 @@ No modules.
 | <a name="input_connection_log_options"></a> [connection\_log\_options](#input\_connection\_log\_options) |  Information about the client connection logging options. | `block` | `` | yes |
 | <a name="input_description"></a> [description](#input\_description) | A brief description of the Client VPN endpoint. | `string` | `` | no |
 | <a name="input_dns_servers"></a> [dns\_servers](#input\_dns\_servers) |  Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used. | `list(string)` | `` | no |
+| <a name="input_security_group_ids"></a> [dns\_security\_group\_ids](#input\_security\_group\_ids) |  The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups. | `list(string)` | `` | no |
+| <a name="input_self_service_portal"></a> [self\_service\_portal](#input\_self\_service\_portal) |  Specify whether to enable the self-service portal for the Client VPN endpoint. | `string` | `disabled` | no |
+| <a name="input_server_certificate_arn"></a> [server\_certificate\_arn](#input\_server\_certificate\_arn) |  The ARN of the ACM server certificate. | `string` | `` | yes |
+| <a name="input_session_timeout_hours"></a> [session\_timeout\_hours](#input\_session\_timeout\_hours) |  The maximum session duration is a trigger by which end-users are required to re-authenticate prior to establishing a VPN session. | `string` | `24` | yes |
+| <a name="input_server_certificate_arn"></a> [server\_certificate\_arn](#input\_server\_certificate\_arn) |  The ARN of the ACM server certificate. | `string` | `` | yes |
+| <a name="input_split_tunnel"></a> [split\_tunnel](#input\_split\_tunnel) | Indicates whether split-tunnel is enabled on VPN endpoint. | `bool` | `false` | no |
+| <a name="input_transport_protocol"></a> [transport\_protocol ](#input\_transport\_protocol ) |  The transport protocol to be used by the VPN session. | `string` | `udp` | no |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id ) |  The ID of the VPC to associate with the Client VPN endpoint. If no security group IDs are specified in the request, the default security group for the VPC is applied. | `string` | `` | no |
+| <a name="input_vpn_port"></a> [vpn\_port ](#input\_vpn\_port ) |   The port number for the Client VPN endpoint. Valid values are 443 and 1194 | `string` | `443` | no |
 
 
 ## Outputs
