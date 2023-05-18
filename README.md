@@ -112,5 +112,15 @@ No modules.
 
 ## Inputs
 
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_authentication_options"></a> [authentication\options](#input\_authentication\_options) | Information about the authentication method to be used to authenticate clients. | `block` | `` | yes |
+| <a name="input_client_cidr_block"></a> [client\cidr\block](#input\_client\_cidr\_block) |  The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created | `string` | `[]` | yes |
+| <a name="input_client_connect_options"></a> [client\connect\options](#input\_client\_connect\_options) | The options for managing connection authorization for new client connections. | `block` | `` | no |
+| <a name="input_client_login_banner_options"></a> [client\login\banner\options](#input\_client\_login\_banner\_options) | Options for enabling a customizable text banner that will be displayed on AWS provided clients when a VPN session is established. | `block` | `` | no |
+| <a name="input_connection_log_options"></a> [connection\log\options](#input\_connection\_log\_options) |  Information about the client connection logging options. | `block` | `` | yes |
+| <a name="input_description"></a> [description](#input\_description) | A brief description of the Client VPN endpoint. | `string` | `` | no |
+| <a name="input_dns_servers"></a> [dns\servers](#input\_dns\_servers) |  Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used. | `list(string)` | `` | no |
+
 
 ## Outputs
