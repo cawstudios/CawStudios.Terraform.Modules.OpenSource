@@ -130,6 +130,11 @@ No modules.
 | <a name="input_transport_protocol"></a> [transport\_protocol ](#input\_transport\_protocol ) |  The transport protocol to be used by the VPN session. | `string` | `udp` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id ) |  The ID of the VPC to associate with the Client VPN endpoint. If no security group IDs are specified in the request, the default security group for the VPC is applied. | `string` | `` | no |
 | <a name="input_vpn_port"></a> [vpn\_port ](#input\_vpn\_port ) |   The port number for the Client VPN endpoint. Valid values are 443 and 1194 | `string` | `443` | no |
+| <a name="input_client_vpn_endpoint_id"></a> [client\_vpn\_endpoint\_id ](#input\_client\_vpn\_endpoint\_id ) | The ID of the Client VPN endpoint. | `string` | `` | yes |
+| <a name="input_target_network_cidr"></a> [target\_network\_cidr ](#input\_target\_network\_cidr) | The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies | `string` | `` | yes |
+| <a name="input_access_group_id"></a> [access\_group\_id](#input\_access\_group\_id) | The ID of the group to which the authorization rule grants access. | `string` | `` | yes |
+| <a name="input_authorize_all_groups"></a> [authorize\_all\_groups](#input\_access\_group\_id) | The ID of the group to which the authorization rule grants access. | `bool` | `` | no |
+| <a name="input_subnet_id "></a> [subnet\_id ](#input\_subnet\_id ) | The ID of the subnet to associate with the Client VPN endpoint. | `string` | `` | yes |
 
 
 ## Outputs
